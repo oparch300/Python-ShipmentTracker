@@ -29,7 +29,7 @@ for i in range(len(TrackerIDs)):
    # Address.append(service.get_tracking(TrackerIDs[i]))
   print("hi")
 
-#Write to csv
+# Write to csv
 with open('E:/ShipmentTracker/output.csv', 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(Address)
