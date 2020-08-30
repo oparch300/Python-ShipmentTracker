@@ -10,10 +10,12 @@ sys.path.insert(1,'E:/ShipmentTracker')
 
 logging.basicConfig()
 logging.getLogger("suds.client").setLevel(logging.DEBUG)
-file_path = os.path.abspath('E:/ShipmentTracker')
+file_path = os.path.abspath('ShipmentTracker')
+print(file_path)
 directory_path = os.path.dirname(file_path)
+print(directory_path)
 file_name = os.path.join(directory_path, "tests.cfg")
-#CONFIGURATION = StampsConfiguration(wsdl="testing", file_name=file_name)
+CONFIGURATION = StampsConfiguration(wsdl="testing", file_name='file_name')
 
 
 
@@ -29,7 +31,7 @@ for i in range(len(TrackerIDs)):
    # Address.append(service.get_tracking(TrackerIDs[i]))
   print("hi")
 
-# Write to csv
+#Write to csv
 with open('E:/ShipmentTracker/output.csv', 'w') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(Address)
